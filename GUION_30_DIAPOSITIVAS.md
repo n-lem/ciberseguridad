@@ -152,17 +152,58 @@
 ---
 
 ### Diapositiva 19: Regla para Comerciantes ("La plata se mira en tu propio celular")
-* **Tiempo:** 36:00 - 38:00
+* **Tiempo:** 34:00 - 35:30
 * **Objetivo:** Establecer el hábito de verificar en la app propia.
 * **Qué dice el orador:**  
   *"Hoy en día cualquiera con un teléfono puede falsificar una foto de una transferencia en dos segundos. Por eso, para Don Pedro y para todos los que cobran con billeteras virtuales: la plata no se mira en el celular del cliente. Se mira en su propio teléfono o maquinita. Si en su aplicación no dice 'Dinero recibido', la mercadería no sale."*
 
 ---
 
-### Diapositiva 20: Mandamiento Barrial ("⭐ La Regla de Oro")
-* **Tiempo:** 38:00 - 40:00
+### Diapositiva 20: Alerta 2026 ("⚠️ ¡NUNCA toques 'Compartir Pantalla'!")
+* **Tiempo:** 35:30 - 37:00
+* **Objetivo:** Prevenir la estafa más nueva por videollamada.
+* **Qué dice el orador:**  
+  *"Mucho cuidado con esto que es lo último que están haciendo en la provincia: te llaman por videollamada de WhatsApp con la foto de perfil de Banco Provincia, ANSES o soporte técnico. Te dicen que toques el botoncito que tiene una pantallita de teléfono abajo. ¡Jamás lo toquen! Al tocarlo, el delincuente ve en vivo toda la pantalla de tu celular: ve cuando abrís el banco y ve tus claves. Si les piden compartir pantalla en una llamada con un desconocido: ¡CORTAN EN EL ACTO!"*
+
+---
+
+### Diapositiva 21: Cuenta DNI y Bancos ("El Token de seguridad: Tu firma sagrada")
+* **Tiempo:** 37:00 - 38:30
+* **Objetivo:** Desmitificar el Token de seguridad de Cuenta DNI y bancos.
+* **Qué dice el orador:**  
+  *"Acá en José C. Paz todos usamos Cuenta DNI para la carnicería o farmacia. Te llaman diciendo que 'se trabó un reintegro de $12.000' y te piden que les dictes el Token que cambia cada 30 segundos. Grábense esto: el Token es como firmar un cheque en blanco; solo sirve para SACAR plata. Ningún banco del mundo te pide el Token para darte un reintegro. Si te piden el Token por teléfono: ¡te están robando, cortá ya!"*
+
+---
+
+### Diapositiva 22: Facebook Marketplace ("La venta del mueble: 'Te transferí de más'")
+* **Tiempo:** 38:30 - 40:00
+* **Objetivo:** Alertar sobre la falsa transferencia en redes sociales.
+* **Qué dice el orador:**  
+  *"Para los que venden una mesita o ropa por Facebook: el supuesto comprador les manda un comprobante falso diciendo que les mandó 200 mil pesos en vez de 20 mil por error, y enseguida los llama un cómplice haciéndose pasar por 'gerente del banco'. No se asusten ni vayan al cajero. Le dicen: 'Hacé el reclamo en tu banco que ellos se comuniquen con el mío', y bloquean al comprador."*
+
+---
+
+### Diapositiva 23: Candados Digitales ("Cuidar Google, Facebook, IG y TikTok")
+* **Tiempo:** 40:00 - 41:30
+* **Objetivo:** Asegurar las demás cuentas del ecosistema digital.
+* **Qué dice el orador:**  
+  *"No solo cuidamos WhatsApp: la cuenta de Google (Gmail) es la dueña de su teléfono Android; hay que activarle la verificación en dos pasos para cuidar sus fotos familiares. En Facebook e Instagram pongan su cuenta en 'Privada' para que desconocidos no usen sus fotos para engañar a sus amigos. Y en TikTok bloqueen los mensajes de extraños y no crean en sorteos mágicos."*
+
+---
+
+### Diapositiva 24: Seguridad Física ("El Celular en la Calle: ¡Fuera Papelitos!")
+* **Tiempo:** 41:30 - 43:00
+* **Objetivo:** Eliminar hábitos de riesgo en la vía pública.
+* **Qué dice el orador:**  
+  *"Por último, un consejo para cuando andamos en el centro de José C. Paz, en la estación o en el colectivo: NUNCA lleven la clave del banco o de Cuenta DNI anotada en un papelito adentro de la funda del celular. Si pierden el teléfono, el ladrón tiene todo servido. Pónganle huella o PIN a la pantalla de bloqueo y activen en WhatsApp la opción 'Silenciar llamadas de desconocidos' para dormir la siesta en paz."*
+
+---
+
+### Diapositiva 25: Mandamiento Barrial ("⭐ La Regla de Oro")
+* **Tiempo:** 43:00 - 44:30
 * **Objetivo:** Fijar el mensaje central antes del juego.
 * **Qué dice el orador:**  
+
   *"Si de esta tarde se llevan una sola frase grabada, que sea esta: 'Ante la duda, soltá el teléfono y preguntale a alguien de confianza'. No hay apuro. No hay vergüenza en preguntar. Preguntar no te hace menos vivo; te hace más inteligente y precavido."*
 
 ---

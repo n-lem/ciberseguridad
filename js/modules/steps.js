@@ -1,35 +1,38 @@
 /**
  * Módulo de Guías Interactivas de Configuración
- * Manejo de pestañas Android / iPhone y marcado de casilleros de progreso.
+ * Manejo dinámico de pestañas accesibles (WhatsApp, Google, Facebook/IG, TikTok, Bancos)
+ * y marcado interactivo de casilleros de progreso (Checkboxes).
  */
 
 export function initSteps() {
-  const tabAndroid = document.getElementById('tab-android');
-  const tabIphone = document.getElementById('tab-iphone');
-  const panelAndroid = document.getElementById('panel-android');
-  const panelIphone = document.getElementById('panel-iphone');
+  const tabButtons = document.querySelectorAll('.guide-tab-btn');
+  const panels = document.querySelectorAll('[role="tabpanel"]');
 
-  if (tabAndroid && tabIphone && panelAndroid && panelIphone) {
-    tabAndroid.addEventListener('click', () => {
-      tabAndroid.classList.add('is-active');
-      tabAndroid.setAttribute('aria-selected', 'true');
-      tabIphone.classList.remove('is-active');
-      tabIphone.setAttribute('aria-selected', 'false');
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetPanelId = btn.getAttribute('aria-controls');
 
-      panelAndroid.removeAttribute('hidden');
-      panelIphone.setAttribute('hidden', '');
+      // Desactivar todos los botones de pestañas
+      tabButtons.forEach(b => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-selected', 'false');
+      });
+
+      // Ocultar todos los paneles
+      panels.forEach(p => {
+        p.setAttribute('hidden', '');
+      });
+
+      // Activar el botón seleccionado y mostrar su panel
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-selected', 'true');
+
+      const targetPanel = document.getElementById(targetPanelId);
+      if (targetPanel) {
+        targetPanel.removeAttribute('hidden');
+      }
     });
-
-    tabIphone.addEventListener('click', () => {
-      tabIphone.classList.add('is-active');
-      tabIphone.setAttribute('aria-selected', 'true');
-      tabAndroid.classList.remove('is-active');
-      tabAndroid.setAttribute('aria-selected', 'false');
-
-      panelIphone.removeAttribute('hidden');
-      panelAndroid.setAttribute('hidden', '');
-    });
-  }
+  });
 
   // Interacción en checkboxes para resaltar visualmente el paso completado
   const checkboxes = document.querySelectorAll('.step-checkbox');

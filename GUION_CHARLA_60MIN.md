@@ -69,6 +69,21 @@
 > Don Pedro mira la foto, confía y le da la bolsa. Cuando Don Pedro abre su aplicación a la noche, la plata nunca entró.  
 > **La regla:** Una foto en el teléfono de otro se inventa en dos minutos. Lo único que vale es lo que dice **la pantalla de tu propio teléfono**. Si en tu cuenta no dice que entró la plata, la mercadería no se entrega."
 
+#### 4. Cuenta DNI y la trampa del Token (El cheque en blanco)
+> **Orador:** "Acá en José C. Paz casi todos usamos Cuenta DNI de Banco Provincia para aprovechar los descuentos de la carnicería.  
+> Te llaman diciendo: *'Hola Doña Marta, la llamamos del banco porque se trabó un reintegro de $12.000. Abra la app, entre a Token y dígame los 6 números que cambian rápido'*.  
+> **Aprenda esto como si fuera un mandamiento:** El Token es como su **firma en un cheque en blanco**. Solo sirve para **sacar plata**. Ningún banco del mundo necesita un Token para depositarle un reintegro. Si alguien por teléfono les pide el Token: ¡les está queriendo vaciar la cuenta! Corten en el acto."
+
+#### 5. ¡Alerta Nueva 2026! El botón 'Compartir Pantalla' en videollamadas
+> **Orador:** "Mucho ojo con esto que es lo último que están haciendo: te llaman por videollamada de WhatsApp con el logo del Banco Provincia de foto de perfil.  
+> Te dicen: *'Señor, para ayudarlo a destrabar su trámite, toque el botoncito que tiene forma de pantallita abajo'*.  
+> Si tocan ese botón, el delincuente **ve en vivo todo lo que pasa en su teléfono**. Ve cuando abren el banco, ve cuando les llega un mensaje con una clave y les saca la plata en sus narices.  
+> Si un desconocido en una llamada les dice que toquen la pantallita: **¡CORTEN LA LLAMADA YA!**"
+
+#### 6. Facebook Marketplace: La venta del mueble y 'Te transferí de más'
+> **Orador:** "Para los que usan Facebook para vender una mesa usada o ropa: el comprador les manda una foto diciendo *'te transferí 200 mil en vez de 20 mil por error'* y enseguida los llama un supuesto 'gerente del banco'.  
+> No se desesperen. No vayan al cajero. Díganle: *'Hacé el reclamo en tu banco que ellos se arreglen con el mío'*, y bloqueen al comprador."
+
 ---
 
 ### [30:00 - 45:00] PARTE 3: Dinámica Interactiva ("¿Es Verdad o es Trampa?")
@@ -134,3 +149,14 @@
     1. **Paso 1 inmediato:** Llamá al número de emergencias de tu banco (o Red Link / Banelco) que figura en la tarjeta para desconocer la operación y bloquear las claves.  
     2. **Paso 2:** Andá a hacer la denuncia formal a la Comisaría 1ra o a la fiscalía de turno. Con el número de denuncia policial, hacés el reclamo ante el banco.  
     3. Según las normativas del Banco Central (BCRA) y la jurisprudencia de defensa del consumidor en la Provincia de Buenos Aires, los bancos tienen la obligación de contar con medidas de seguridad antifraude. Presentando la denuncia formal y el reclamo en Defensa del Consumidor, muchos vecinos han logrado la anulación del préstamo trucho y la devolución del saldo.
+
+### Nivel 4: Redes Sociales, Cuenta de Google y Celular Físico
+* **"¿Por qué es tan importante proteger la cuenta de Google (Gmail)?"**  
+  * *Respuesta:* Porque en los teléfonos Android, la cuenta de Google es la dueña del aparato. Ahí se guardan las fotos, los contactos de la familia y las copias de seguridad. Si alguien entra a tu Google, puede ver tus fotos y correos. Por eso, activale la 'Verificación en dos pasos' desde Ajustes del teléfono > Google > Seguridad.
+* **"¿Cómo evito que me hackeen Facebook o Instagram?"**  
+  * *Respuesta:* Poné tu cuenta en modo 'Privado' para que solo tus amigos reales vean lo que publicás. Si te llega una solicitud de amistad de un vecino que ya tenías de amigo (con la misma foto), no la aceptes; es una cuenta clonada. Y jamás pongas como contraseña tu fecha de nacimiento ni tu nombre.
+* **"¿Qué es la función de 'Silenciar llamadas de desconocidos' en WhatsApp?"**  
+  * *Respuesta:* Es una bendición para los adultos mayores. Se activa en WhatsApp en Ajustes > Privacidad > Llamadas. Si te llama un número que no tenés agendado en tus contactos, el teléfono no suena ni te asusta en la siesta. Queda la llamada registrada como perdida para que la mires tranquilo con un hijo o nieto.
+* **"¿Por qué no tengo que llevar la clave anotada en la funda del celular?"**  
+  * *Respuesta:* Muchísima gente lleva el cartoncito o papel con la clave del cajero o de Cuenta DNI adentro de la funda del teléfono. Si te lo sacan en la parada del colectivo o te lo olvidás en un negocio, el ladrón tiene el celular y la clave juntos. Las claves se guardan en un cuaderno seguro en casa, nunca pegadas al aparato.
+
