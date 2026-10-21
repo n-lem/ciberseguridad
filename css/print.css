@@ -1,0 +1,169 @@
+/* ==========================================================================
+   ESTILOS DE IMPRESIÓN LIMPIA (@media print)
+   Optimizado para la Heladera, Cartelera del Centro de Jubilados o la Escuela
+   ========================================================================== */
+
+@media print {
+  /* Ocultar elementos interactivos o no imprimibles */
+  .access-bar,
+  .btn-action,
+  .guide-tabs,
+  .skip-link,
+  .lsa-box,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset de fondo y textos a tinta negra limpia */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 14pt;
+    line-height: 1.4;
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 10mm;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Encabezado limpio para la heladera */
+  .site-header {
+    border-bottom: 2pt solid #000000;
+    padding: 0 0 10pt 0;
+    margin-bottom: 15pt;
+  }
+
+  .site-header__kicker {
+    font-size: 11pt;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .site-header__title {
+    font-size: 20pt;
+    font-weight: 900;
+  }
+
+  /* Banner de emergencia convertido en caja resaltada con borde negro */
+  .emergency-banner {
+    border: 3pt solid #000000 !important;
+    padding: 10pt !important;
+    margin-bottom: 15pt;
+    page-break-inside: avoid;
+  }
+
+  .emergency-banner__badge {
+    border: 1pt solid #000000;
+    font-weight: bold;
+  }
+
+  .emergency-banner__steps {
+    display: block !important;
+  }
+
+  .emergency-banner__step {
+    border: 1pt solid #333333 !important;
+    margin-bottom: 5pt;
+    padding: 5pt !important;
+  }
+
+  .emergency-banner__step-num {
+    border: 1pt solid #000000;
+    font-weight: 900;
+  }
+
+  /* La Regla de Oro destacada */
+  .golden-rule {
+    border: 3pt solid #000000 !important;
+    padding: 12pt !important;
+    margin: 15pt 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .golden-rule__text {
+    font-size: 16pt !important;
+  }
+
+  /* Tarjetas de casos y semáforo */
+  .scam-card,
+  .traffic-light-section,
+  .guide-box,
+  .directory-card {
+    border: 1.5pt solid #000000 !important;
+    padding: 10pt !important;
+    margin-bottom: 12pt !important;
+    page-break-inside: avoid;
+  }
+
+  .traffic-light-grid {
+    display: block !important;
+  }
+
+  .traffic-card {
+    border: 1.5pt solid #000000 !important;
+    margin-bottom: 8pt;
+  }
+
+  .traffic-card__badge {
+    border: 1pt solid #000000;
+  }
+
+  /* Guía de pasos con casillas cuadradas impresas listas para tildar con birome */
+  .step-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18pt !important;
+    height: 18pt !important;
+    border: 2pt solid #000000 !important;
+    display: inline-block;
+  }
+
+  /* Directorio de teléfonos */
+  .directory-grid {
+    display: block !important;
+  }
+
+  .directory-card {
+    margin-bottom: 8pt;
+  }
+
+  .directory-card__btn {
+    border: 1pt solid #000000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  /* Pie institucional */
+  .site-footer {
+    border-top: 1pt solid #000000;
+    padding-top: 10pt;
+    margin-top: 20pt;
+    page-break-before: auto;
+  }
+
+  /* Mostrar la URL de los enlaces importantes */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    font-weight: normal;
+  }
+
+  a[href^="tel:"]:after {
+    content: " (Llamar al " attr(href) ")";
+    font-size: 11pt;
+    font-weight: bold;
+  }
+}

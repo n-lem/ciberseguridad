@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport amigable que NUNCA bloquea el zoom del usuario -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidemos a Nuestros Mayores | Guía Barrial contra Estafas Virtuales</title>
+  
+  <meta name="description" content="Guía barrial y comunitaria con consejos sencillos, lenguaje claro y herramientas accesibles para evitar estafas telefónicas y virtuales. Proyecto de Prácticas Digitales y NTICx en José C. Paz.">
+  <meta name="theme-color" content="#004b93">
+
+  <!-- Google Fonts para lectura descansada y tipografía moderna -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilo modulares -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+  <!-- Enlace accesible de salto al contenido principal para lectores de pantalla -->
+  <a href="#contenido-principal" class="skip-link">Saltar directo al contenido principal</a>
+
+  <!-- 1. BARRA SUPERIOR FIJA DE ACCESIBILIDAD GERONTOLÓGICA -->
+  <aside class="access-bar" aria-label="Herramientas de ayuda visual y lectura">
+    <div class="access-bar__container">
+      <div class="access-bar__title">
+        <span aria-hidden="true">👓</span>
+        <span>Ayuda para leer mejor:</span>
+      </div>
+      <div class="access-bar__controls">
+        <button id="btn-font-decrease" class="access-btn" type="button" aria-label="Achicar tamaño de letra">
+          <span aria-hidden="true">A-</span> Letra chica
+        </button>
+        <button id="btn-font-increase" class="access-btn" type="button" aria-label="Agrandar tamaño de letra">
+          <span aria-hidden="true">A+</span> Letra grande
+        </button>
+        <button id="btn-contrast-toggle" class="access-btn" type="button" aria-pressed="false" aria-label="Activar modo de alto contraste para vista cansada">
+          <span aria-hidden="true">🌓</span> Vista Cansada
+        </button>
+        <button id="btn-print-guide" class="access-btn no-print" type="button" aria-label="Imprimir guía para pegar en la heladera">
+          <span aria-hidden="true">🖨️</span> Imprimir para la heladera
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. BANNER DE EMERGENCIA INMEDIATA -->
+  <section class="emergency-banner" aria-labelledby="alerta-urgente-titulo">
+    <div class="container emergency-banner__inner">
+      <div class="emergency-banner__badge">
+        <span aria-hidden="true">🚨</span> ¿Sentís que te engañaron recién?
+      </div>
+      <h2 id="alerta-urgente-titulo" class="emergency-banner__title">
+        ¿Creés que te acaban de estafar? Hacé esto ya mismo:
+      </h2>
+      <ol class="emergency-banner__steps">
+        <li class="emergency-banner__step">
+          <span class="emergency-banner__step-num" aria-hidden="true">1</span>
+          <p class="emergency-banner__step-text">
+            <strong>Cortá la llamada ya:</strong> No tengas miedo ni vergüenza. Aunque te digan que es urgente, cortá el teléfono.
+          </p>
+        </li>
+        <li class="emergency-banner__step">
+          <span class="emergency-banner__step-num" aria-hidden="true">2</span>
+          <p class="emergency-banner__step-text">
+            <strong>Llamá a tu banco:</strong> Marcá el número que está atrás de tu tarjeta de débito o crédito para pedir el bloqueo preventivo.
+          </p>
+        </li>
+        <li class="emergency-banner__step">
+          <span class="emergency-banner__step-num" aria-hidden="true">3</span>
+          <p class="emergency-banner__step-text">
+            <strong>Avisá a alguien cercano:</strong> Contale a un hijo, nieto o vecino de confianza. Nunca te guardes la duda a solas.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 3. CABECERA PRINCIPAL HERO -->
+  <header class="site-header">
+    <div class="container">
+      <span class="site-header__kicker">Guía Comunitaria y Barrial de Prevención</span>
+      <h1 class="site-header__title">Cuidemos lo Nuestro: Nadie te Apura</h1>
+      <p class="site-header__subtitle">
+        Consejos claros, sin palabras raras en inglés, para que uses tu celular y tu plata con total tranquilidad en José C. Paz.
+      </p>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="contenido-principal" class="container" tabindex="-1">
+
+    <!-- 4. LA REGLA DE ORO -->
+    <section class="golden-rule" aria-labelledby="regla-oro-titulo">
+      <div class="golden-rule__header">
+        <span class="golden-rule__icon" aria-hidden="true">⭐</span>
+        <div>
+          <span class="golden-rule__label">Lectura obligatoria para recordar siempre</span>
+          <h2 id="regla-oro-titulo" class="golden-rule__text">
+            "Ante la duda, soltá el teléfono y preguntale a alguien de confianza"
+          </h2>
+        </div>
+      </div>
+      <p class="golden-rule__desc">
+        Ningún trámite verdadero de ANSES, PAMI, bancos o el hospital vence en 10 minutos. Los delincuentes siempre te meten apuro o miedo para que no pienses con calma. Si te apuran, es estafa seguro. Respirá hondo y cortá.
+      </p>
+      <div>
+        <button type="button" class="btn-action btn-action--tts" data-speech-target="regla-oro-titulo" aria-label="Escuchar la regla de oro en voz alta">
+          <span aria-hidden="true">🔊</span> Escuchar en voz alta
+        </button>
+      </div>
+    </section>
+
+    <!-- 5. PLACEHOLDER LSA (LENGUA DE SEÑAS ARGENTINA) -->
+    <section class="lsa-box" aria-label="Contenido accesible en Lengua de Señas Argentina">
+      <span class="lsa-box__icon" aria-hidden="true">🤟</span>
+      <h2 class="lsa-box__title">Espacio reservado para video explicativo en Lengua de Señas Argentina (LSA)</h2>
+      <p class="lsa-box__info">
+        En este sector, los estudiantes de NTICx integrarán los videos grabados con intérpretes para que nuestros vecinos sordos e hipoacúsicos accedan a la misma información con autonomía.
+      </p>
+    </section>
+
+    <!-- 6. CASOS REALES Y ESTAFAS ACTUALES -->
+    <section aria-labelledby="seccion-casos-titulo">
+      <h2 id="seccion-casos-titulo">Los 3 Engaños Más Comunes del Barrio</h2>
+      <p>
+        Para que no te agarren desprevenido, te contamos con ejemplos reales cómo intentan engañar a la gente de nuestra comunidad:
+      </p>
+
+      <div class="scams-grid">
+        
+        <!-- CASO 1: ANSES Y PAMI -->
+        <article class="scam-card" id="caso-anses" aria-labelledby="caso-anses-titulo">
+          <div class="scam-card__header">
+            <div>
+              <span class="scam-card__badge">Caso 1: El Trámite Falso</span>
+              <h3 id="caso-anses-titulo" class="scam-card__title">
+                Falsos turnos, bonos y vacunas de ANSES o PAMI
+              </h3>
+            </div>
+          </div>
+
+          <div class="scam-card__story">
+            <strong>La historia de Doña Carmen (72 años):</strong>
+            "Me llamaron diciendo que eran del PAMI y que me correspondía un bono especial de reajuste. Me dijeron que para cobrarlo tenía que ir urgente al cajero automático del banco con ellos en línea y apretar unas opciones que me iban a dictar".
+          </div>
+
+          <div class="scam-card__analogy">
+            <h4 class="scam-card__analogy-title">💡 ¿Qué es un "link" o "enlace azul"?</h4>
+            <p>
+              Un <strong>link</strong> es como una dirección escrita en un papelito que te da un desconocido en la calle para que vayas a una casa misteriosa. Si no sabés quién te lo dio, <strong>no vayas ni toques las letras azules</strong>. Ni ANSES ni PAMI te van a pedir que vayas al cajero a generar claves.
+            </p>
+          </div>
+
+          <div class="scam-card__defense">
+            <h4 class="scam-card__defense-title">🛡️ ¿Cómo te defendés?</h4>
+            <p>
+              Si te llaman diciendo que tenés plata a favor o un turno médico urgente, <strong>cortá inmediatamente</strong>. Andá a la oficina de ANSES o PAMI de José C. Paz en persona o pedile a un familiar que se fije en la página oficial.
+            </p>
+          </div>
+
+          <div class="scam-card__actions">
+            <button type="button" class="btn-action btn-action--tts" data-speech-target="caso-anses" aria-label="Escuchar el consejo sobre ANSES y PAMI">
+              <span aria-hidden="true">🔊</span> Escuchar este consejo
+            </button>
+            <button type="button" class="btn-action btn-action--whatsapp" data-share-title="Alerta ANSES y PAMI truchos" data-share-text="¡Ojo en el barrio! Están llamando haciéndose pasar por ANSES y PAMI para robar claves bancarias en los cajeros. Si te llaman, cortá. Mirá los consejos acá:">
+              <span aria-hidden="true">📲</span> Compartir esta alerta por WhatsApp
+            </button>
+          </div>
+        </article>
+
+        <!-- CASO 2: SECUESTRO DE WHATSAPP -->
+        <article class="scam-card" id="caso-whatsapp" aria-labelledby="caso-whatsapp-titulo">
+          <div class="scam-card__header">
+            <div>
+              <span class="scam-card__badge">Caso 2: El Robo del Celular Digital</span>
+              <h3 id="caso-whatsapp-titulo" class="scam-card__title">
+                El código de 6 números que te roban para quitarte el WhatsApp
+              </h3>
+            </div>
+          </div>
+
+          <div class="scam-card__story">
+            <strong>La historia de Don Roberto (68 años):</strong>
+            "Un conocido de la iglesia me escribió por WhatsApp diciéndome que me mandó un código por mensaje de texto por error y que se lo pasara. A los cinco minutos mi WhatsApp se cerró y empezaron a pedirle plata prestada a todos mis amigos en mi nombre".
+          </div>
+
+          <div class="scam-card__analogy">
+            <h4 class="scam-card__analogy-title">💡 ¿Qué es ese código de 6 números por SMS?</h4>
+            <p>
+              Ese código es la <strong>llave de la puerta de tu casa</strong>. Si alguien te la pide por la ventana, aunque te diga que es un vecino o un médico, <strong>nunca se la des</strong>. WhatsApp jamás te pedirá códigos para regalarte nada.
+            </p>
+          </div>
+
+          <div class="scam-card__defense">
+            <h4 class="scam-card__defense-title">🛡️ ¿Cómo te defendés?</h4>
+            <p>
+              Nunca le leas ni reenvíes ningún número que te llegue por mensaje común (SMS) a nadie, ni a amigos ni a familiares. Si alguien te pide plata por WhatsApp, llamalo por teléfono común para escuchar su voz real.
+            </p>
+          </div>
+
+          <div class="scam-card__actions">
+            <button type="button" class="btn-action btn-action--tts" data-speech-target="caso-whatsapp" aria-label="Escuchar el consejo sobre robo de WhatsApp">
+              <span aria-hidden="true">🔊</span> Escuchar este consejo
+            </button>
+            <button type="button" class="btn-action btn-action--whatsapp" data-share-title="Alerta de robo de WhatsApp" data-share-text="¡Atención familia! Si te llega un mensaje con 6 números, NO se lo des a nadie. Te pueden robar el WhatsApp y pedir plata a tus contactos. Mirá cómo cuidarte:">
+              <span aria-hidden="true">📲</span> Compartir esta alerta por WhatsApp
+            </button>
+          </div>
+        </article>
+
+        <!-- CASO 3: EL FALSO COMPROBANTE -->
+        <article class="scam-card" id="caso-mercadopago" aria-labelledby="caso-mercadopago-titulo">
+          <div class="scam-card__header">
+            <div>
+              <span class="scam-card__badge">Caso 3: La Foto Trucha</span>
+              <h3 id="caso-mercadopago-titulo" class="scam-card__title">
+                Comprobantes truchos de transferencias en el almacén
+              </h3>
+            </div>
+          </div>
+
+          <div class="scam-card__story">
+            <strong>La historia de Don Pedro (almacenero de José C. Paz):</strong>
+            "Vino un cliente apurado, compró mercadería y me mostró en la pantalla de su teléfono un comprobante verde que decía 'Transferencia exitosa'. Como estaba apurado se fue. Cuando miré mi teléfono al rato, la plata nunca había entrado".
+          </div>
+
+          <div class="scam-card__analogy">
+            <h4 class="scam-card__analogy-title">💡 ¿Qué es un comprobante de celular?</h4>
+            <p>
+              Una foto en la pantalla del teléfono de otra persona es tan fácil de inventar como un billete fotocopiado. Lo único que vale es lo que dice <strong>tu propia maquinita o tu propia aplicación</strong>.
+            </p>
+          </div>
+
+          <div class="scam-card__defense">
+            <h4 class="scam-card__defense-title">🛡️ ¿Cómo te defendés?</h4>
+            <p>
+              No entregues mercadería ni confirmes una venta solo mirando la pantalla del comprador. Abrí tu aplicación y esperá a ver el saldo acreditado o el cartel verde en tu propio celular.
+            </p>
+          </div>
+
+          <div class="scam-card__actions">
+            <button type="button" class="btn-action btn-action--tts" data-speech-target="caso-mercadopago" aria-label="Escuchar el consejo sobre transferencias falsas">
+              <span aria-hidden="true">🔊</span> Escuchar este consejo
+            </button>
+            <button type="button" class="btn-action btn-action--whatsapp" data-share-title="Alerta comprobantes truchos" data-share-text="Para todos los comerciantes y vecinos del barrio: nunca confíen en una captura de pantalla que les muestren. Miren siempre su propia aplicación. Guía útil:">
+              <span aria-hidden="true">📲</span> Compartir esta alerta por WhatsApp
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 7. INFOGRAFÍA: EL SEMÁFORO DE LA ESTAFA -->
+    <section class="traffic-light-section" id="semaforo-seccion" aria-labelledby="semaforo-titulo">
+      <h2 id="semaforo-titulo">El Semáforo de la Estafa: Guía Rápida Visual</h2>
+      <p>
+        Guardá o imprimí este semáforo para tener bien claro qué hacer en cada situación cotidiana:
+      </p>
+
+      <div class="traffic-light-grid">
+        <!-- ROJO -->
+        <div class="traffic-card traffic-card--red">
+          <span class="traffic-card__badge">🔴 ROJO: ¡Peligro Inmediato!</span>
+          <h3 class="traffic-card__title">Cortá la llamada ya mismo si:</h3>
+          <ul class="traffic-card__list">
+            <li>Te piden un código de 6 números que te llegó por SMS.</li>
+            <li>Te dicen que ganaste un auto, televisor o plata de un sorteo al que nunca te anotaste.</li>
+            <li>Te exigen que vayas corriendo al cajero automático a generar claves.</li>
+            <li>Te dicen que un familiar está secuestrado o accidentado y no te dejan cortar.</li>
+          </ul>
+        </div>
+
+        <!-- AMARILLO -->
+        <div class="traffic-card traffic-card--yellow">
+          <span class="traffic-card__badge">🟡 AMARILLO: ¡Duda y Frená!</span>
+          <h3 class="traffic-card__title">Frená la mano y pensá si:</h3>
+          <ul class="traffic-card__list">
+            <li>Te mandan un mensaje con letras azules (links) de bancos o empresas de luz o gas.</li>
+            <li>Un amigo te escribe diciendo que cambió el número y te pide dólares o pesos prestados.</li>
+            <li>Te muestran una foto de una transferencia y te apuran para que les des las cosas.</li>
+          </ul>
+        </div>
+
+        <!-- VERDE -->
+        <div class="traffic-card traffic-card--green">
+          <span class="traffic-card__badge">🟢 VERDE: ¡Tranquilidad Total!</span>
+          <h3 class="traffic-card__title">Hacé esto y vas a estar seguro:</h3>
+          <ul class="traffic-card__list">
+            <li>Cortá el teléfono, respirá y llamá a tu hijo, nieto o vecino.</li>
+            <li>Andá en persona a la sucursal de tu banco en el centro de José C. Paz.</li>
+            <li>Activá la verificación en dos pasos en tu WhatsApp con la guía de acá abajo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scam-card__actions">
+        <button type="button" class="btn-action btn-action--print" id="btn-print-semaforo">
+          <span aria-hidden="true">🖨️</span> Imprimir este Semáforo
+        </button>
+        <button type="button" class="btn-action btn-action--whatsapp" data-share-title="Semáforo de la Estafa" data-share-text="Mirá este semáforo sencillo para saber cuándo cortar el teléfono y evitar estafas en el barrio. Cuidemos a nuestros abuelos y vecinos:">
+          <span aria-hidden="true">📲</span> Compartir Semáforo por WhatsApp
+        </button>
+      </div>
+    </section>
+
+    <!-- 8. GUÍA DE CONFIGURACIÓN PASO A PASO (VERIFICACIÓN EN DOS PASOS) -->
+    <section class="guide-box" aria-labelledby="guia-titulo">
+      <h2 id="guia-titulo">Poné un Candado a tu WhatsApp (Paso a Paso)</h2>
+      <p>
+        Seguí estos pasos con tu celular en la mano. Hacé clic en cada casillero a medida que lo vayas completando para no perderte:
+      </p>
+
+      <div class="guide-tabs" role="tablist" aria-label="Elegí tu modelo de celular">
+        <button type="button" class="guide-tab-btn is-active" id="tab-android" role="tab" aria-selected="true" aria-controls="panel-android">
+          📱 Celular Android (Samsung, Motorola, Xiaomi)
+        </button>
+        <button type="button" class="guide-tab-btn" id="tab-iphone" role="tab" aria-selected="false" aria-controls="panel-iphone">
+          🍏 Celular iPhone (Apple)
+        </button>
+      </div>
+
+      <!-- PANEL ANDROID -->
+      <div id="panel-android" role="tabpanel" aria-labelledby="tab-android">
+        <ol class="step-checklist">
+          <li class="step-item">
+            <input type="checkbox" id="step-android-1" class="step-checkbox" aria-label="Completar paso 1">
+            <label for="step-android-1" class="step-content">
+              <span class="step-title">Paso 1: Abrir Ajustes</span>
+              <p class="step-desc">Abrí WhatsApp. Arriba a la derecha tocá los <strong>tres puntitos verticales</strong> y después tocá la palabra <strong>Ajustes</strong>.</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-android-2" class="step-checkbox" aria-label="Completar paso 2">
+            <label for="step-android-2" class="step-content">
+              <span class="step-title">Paso 2: Entrar a Cuenta</span>
+              <p class="step-desc">Tocá la opción que tiene el dibujo de una personita o candado que dice <strong>Cuenta</strong>.</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-android-3" class="step-checkbox" aria-label="Completar paso 3">
+            <label for="step-android-3" class="step-content">
+              <span class="step-title">Paso 3: Verificación en dos pasos</span>
+              <p class="step-desc">Tocá donde dice <strong>Verificación en dos pasos</strong> y después apretá el botón verde que dice <strong>Activar</strong>.</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-android-4" class="step-checkbox" aria-label="Completar paso 4">
+            <label for="step-android-4" class="step-content">
+              <span class="step-title">Paso 4: Elegir tu clave secreta de 6 números</span>
+              <p class="step-desc">Escribí 6 números que solo vos conozcas (anotalos en un cuadernito en casa, no uses tu fecha de nacimiento ni 123456).</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-android-5" class="step-checkbox" aria-label="Completar paso 5">
+            <label for="step-android-5" class="step-content">
+              <span class="step-title">Paso 5: Poner tu correo electrónico</span>
+              <p class="step-desc">Ingresá tu correo electrónico por si alguna vez te olvidás la clave. ¡Listo! Tu WhatsApp ahora tiene candado doble.</p>
+            </label>
+          </li>
+        </ol>
+      </div>
+
+      <!-- PANEL IPHONE (Oculto inicialmente) -->
+      <div id="panel-iphone" role="tabpanel" aria-labelledby="tab-iphone" hidden>
+        <ol class="step-checklist">
+          <li class="step-item">
+            <input type="checkbox" id="step-iphone-1" class="step-checkbox" aria-label="Completar paso 1">
+            <label for="step-iphone-1" class="step-content">
+              <span class="step-title">Paso 1: Abrir Configuración</span>
+              <p class="step-desc">Abrí WhatsApp y tocá abajo a la derecha la ruedita que dice <strong>Configuración</strong>.</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-iphone-2" class="step-checkbox" aria-label="Completar paso 2">
+            <label for="step-iphone-2" class="step-content">
+              <span class="step-title">Paso 2: Entrar a Cuenta</span>
+              <p class="step-desc">Buscá la opción que dice <strong>Cuenta</strong> y tocala.</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-iphone-3" class="step-checkbox" aria-label="Completar paso 3">
+            <label for="step-iphone-3" class="step-content">
+              <span class="step-title">Paso 3: Verificación en dos pasos</span>
+              <p class="step-desc">Tocá <strong>Verificación en dos pasos</strong> y luego el botón <strong>Activar</strong>.</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-iphone-4" class="step-checkbox" aria-label="Completar paso 4">
+            <label for="step-iphone-4" class="step-content">
+              <span class="step-title">Paso 4: Elegir tu clave de 6 números</span>
+              <p class="step-desc">Escribí tus 6 números seguros y confirmalos. Anotalos en un papel seguro en tu casa.</p>
+            </label>
+          </li>
+          <li class="step-item">
+            <input type="checkbox" id="step-iphone-5" class="step-checkbox" aria-label="Completar paso 5">
+            <label for="step-iphone-5" class="step-content">
+              <span class="step-title">Paso 5: Confirmar correo de auxilio</span>
+              <p class="step-desc">Escribí tu correo electrónico para recuperar tu cuenta si te olvidás la clave. ¡Felicitaciones, cuenta protegida!</p>
+            </label>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 9. DÓNDE DENUNCIAR: FOCO LOCAL JOSÉ C. PAZ Y PROVINCIA DE BUENOS AIRES -->
+    <section aria-labelledby="directorio-titulo">
+      <h2 id="directorio-titulo">¿Dónde Pedir Ayuda y Denunciar en José C. Paz?</h2>
+      <p>
+        Si te pasó algo o tenés una sospecha grave, no te quedes callado. Estos son los teléfonos oficiales gratuitos y comisarías de nuestra zona:
+      </p>
+
+      <div class="directory-grid">
+        
+        <!-- COMISARÍA 1RA JOSÉ C. PAZ -->
+        <article class="directory-card">
+          <div>
+            <h3 class="directory-card__name">Comisaría 1ra de José C. Paz</h3>
+            <p class="directory-card__desc">Dirección: Av. Altube 2050 (Centro). Atienden las 24 horas todos los días del año.</p>
+          </div>
+          <a href="tel:02320422111" class="directory-card__btn" aria-label="Llamar a la Comisaría 1ra de José C. Paz">
+            <span aria-hidden="true">📞</span> Llamar: (02320) 422-111
+          </a>
+        </article>
+
+        <!-- CENTRO DE MONITOREO Y SEGURIDAD LOCAL -->
+        <article class="directory-card">
+          <div>
+            <h3 class="directory-card__name">Centro de Operaciones Municipal (COM)</h3>
+            <p class="directory-card__desc">Atención de emergencias y prevención comunitaria del Municipio de José C. Paz.</p>
+          </div>
+          <a href="tel:02320463000" class="directory-card__btn" aria-label="Llamar al Centro de Operaciones Municipal">
+            <span aria-hidden="true">📞</span> Llamar: (02320) 463-000
+          </a>
+        </article>
+
+        <!-- FISCALÍA ESPECIALIZADA UFECI -->
+        <article class="directory-card">
+          <div>
+            <h3 class="directory-card__name">Fiscalía Especializada en Ciberdelitos (UFECI)</h3>
+            <p class="directory-card__desc">Equipo oficial de fiscales que investiga estafas bancarias, robos de cuentas y vaciamientos.</p>
+          </div>
+          <a href="tel:01150710040" class="directory-card__btn" aria-label="Llamar a la fiscalía de ciberdelitos UFECI">
+            <span aria-hidden="true">📞</span> Llamar: (011) 5071-0040
+          </a>
+        </article>
+
+        <!-- LÍNEA 137 -->
+        <article class="directory-card">
+          <div>
+            <h3 class="directory-card__name">Línea 137 (Acompañamiento a Víctimas)</h3>
+            <p class="directory-card__desc">Línea nacional gratuita para contención emocional y asesoramiento directo las 24 horas.</p>
+          </div>
+          <a href="tel:137" class="directory-card__btn" aria-label="Llamar gratis al 137">
+            <span aria-hidden="true">📞</span> Llamar Gratis: 137
+          </a>
+        </article>
+
+        <!-- 911 EMERGENCIAS POLICIALES -->
+        <article class="directory-card">
+          <div>
+            <h3 class="directory-card__name">911 - Emergencias Policía Bonaerense</h3>
+            <p class="directory-card__desc">Para cuando un desconocido está en la puerta de tu casa o una llamada amenaza tu seguridad inmediata.</p>
+          </div>
+          <a href="tel:911" class="directory-card__btn" aria-label="Llamar a emergencias 911">
+            <span aria-hidden="true">🚨</span> Llamar Urgente: 911
+          </a>
+        </article>
+
+        <!-- BANCO PROVINCIA / RED LINK BLOQUEO -->
+        <article class="directory-card">
+          <div>
+            <h3 class="directory-card__name">Bloqueo Red Link / Banco Provincia</h3>
+            <p class="directory-card__desc">Número para pedir la baja inmediata de tus tarjetas de débito o claves si las diste a un estafador.</p>
+          </div>
+          <a href="tel:08008885465" class="directory-card__btn" aria-label="Llamar al 0800 de Red Link">
+            <span aria-hidden="true">🔒</span> Llamar: 0800-888-5465
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. PIE DE PÁGINA INSTITUCIONAL -->
+  <footer class="site-footer">
+    <div class="container site-footer__content">
+      <span class="site-footer__badge">Proyecto Educativo y Solidario</span>
+      <p class="site-footer__text">
+        Desarrollado con dedicación por estudiantes de las materias <strong>Prácticas Digitales</strong> y <strong>NTICx</strong> para el cuidado y acompañamiento de nuestros adultos mayores y familias de José C. Paz, Provincia de Buenos Aires.
+      </p>
+      <p class="site-footer__text">
+        Esta plataforma es comunitaria, pública y gratuita. Aloja su código en GitHub Pages para que cualquier escuela o centro de jubilados pueda compartirlo y adaptarlo.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts modulares con ES6 -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

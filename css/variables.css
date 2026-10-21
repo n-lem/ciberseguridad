@@ -1,0 +1,118 @@
+/* ==========================================================================
+   VARIABLES DE DISEÑO Y ACCESIBILIDAD (Gerontotecnología)
+   Proyecto Educativo: Prácticas Digitales & NTICx - José C. Paz
+   ========================================================================== */
+
+:root {
+  /* Escala tipográfica base (20px ergonómico para adultos mayores) */
+  --font-base: 20px;
+  --font-factor: 1; /* Modificado dinámicamente por los botones A+ / A- */
+
+  --font-family-primary: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-display: 'Merriweather', Georgia, serif;
+
+  /* Tamaños calculados */
+  --text-sm: calc(16px * var(--font-factor));
+  --text-md: calc(18px * var(--font-factor));
+  --text-base: calc(var(--font-base) * var(--font-factor));
+  --text-lg: calc(24px * var(--font-factor));
+  --text-xl: calc(28px * var(--font-factor));
+  --text-2xl: calc(34px * var(--font-factor));
+  --text-3xl: calc(42px * var(--font-factor));
+
+  /* Espaciados amplios */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* Radio de bordes redondeados y amigables */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Elevaciones y sombras suaves */
+  --shadow-subtle: 0 4px 12px rgba(0, 32, 96, 0.08);
+  --shadow-card: 0 8px 24px rgba(0, 32, 96, 0.12);
+  --shadow-emergency: 0 8px 30px rgba(185, 28, 28, 0.25);
+
+  /* PALETA ESTÁNDAR: Azules de Confianza y Alto Contraste */
+  --color-bg-body: #f4f7fb;
+  --color-bg-surface: #ffffff;
+  --color-bg-subtle: #e8eef6;
+
+  --color-text-main: #0c1a30;
+  --color-text-muted: #2c3e55;
+  --color-text-inverse: #ffffff;
+
+  --color-primary: #004b93;         /* Azul institucional legible */
+  --color-primary-dark: #002e5b;    /* Para texto y bordes de gran contraste */
+  --color-primary-light: #e0edfb;
+
+  --color-secondary: #00875a;       /* Verde tranquilidad */
+  --color-secondary-dark: #005c3e;
+
+  /* Alertas suaves pero contundentes */
+  --color-danger: #b91c1c;          /* Rojo alerta visible */
+  --color-danger-bg: #fee2e2;
+  --color-danger-border: #ef4444;
+
+  --color-warning: #b45309;         /* Ámbar / amarillo oscuro legible */
+  --color-warning-bg: #fef3c7;
+  --color-warning-border: #f59e0b;
+
+  --color-safe: #15803d;            /* Verde seguridad */
+  --color-safe-bg: #dcfce7;
+  --color-safe-border: #22c55e;
+
+  --color-border: #cbd5e1;
+  --color-border-strong: #475569;
+
+  /* Accesibilidad táctil: Mínimo 48px para cualquier elemento clickeable */
+  --touch-target-min: 52px;
+  --focus-ring-color: #ffbf00;      /* Anillo de foco amarillo oro de 4px */
+}
+
+/* ==========================================================================
+   TEMA: ALTO CONTRASTE (Para personas con baja visión / vista cansada)
+   Fondo negro profundo (#000000), Texto Amarillo (#ffff00) y Blanco (#ffffff)
+   ========================================================================== */
+[data-theme="high-contrast"] {
+  --color-bg-body: #000000;
+  --color-bg-surface: #121212;
+  --color-bg-subtle: #1e1e1e;
+
+  --color-text-main: #ffffff;
+  --color-text-muted: #ffff70;
+  --color-text-inverse: #000000;
+
+  --color-primary: #ffff00;
+  --color-primary-dark: #ffff00;
+  --color-primary-light: #333300;
+
+  --color-secondary: #00ff66;
+  --color-secondary-dark: #00ff66;
+
+  --color-danger: #ff4d4d;
+  --color-danger-bg: #330000;
+  --color-danger-border: #ff6666;
+
+  --color-warning: #ffd000;
+  --color-warning-bg: #332800;
+  --color-warning-border: #ffd700;
+
+  --color-safe: #33ff77;
+  --color-safe-bg: #003311;
+  --color-safe-border: #00ff66;
+
+  --color-border: #ffffff;
+  --color-border-strong: #ffff00;
+
+  --shadow-subtle: none;
+  --shadow-card: 0 0 0 2px #ffffff;
+  --shadow-emergency: 0 0 0 3px #ff4d4d;
+
+  --focus-ring-color: #00ffff; /* Cian ultra visible contra negro */
+}

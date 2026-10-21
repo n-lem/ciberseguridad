@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación Comunitaria: Cuidemos lo Nuestro | José C. Paz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #004b93;
+      --primary-dark: #002e5b;
+      --accent: #ffbf00;
+      --danger: #b91c1c;
+      --safe: #15803d;
+      --bg: #0c1a30;
+      --text: #ffffff;
+      --card-bg: #132743;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      user-select: none;
+    }
+
+    /* Barra superior de navegación del orador */
+    .slide-nav {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .slide-nav__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .slide-nav__counter {
+      font-size: 1.25rem;
+      font-weight: 900;
+      background: var(--primary);
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+    }
+
+    .slide-nav__buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .nav-btn {
+      background: #ffffff;
+      color: #000000;
+      border: none;
+      font-weight: 900;
+      font-size: 1.1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: transform 0.1s, background-color 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--accent);
+    }
+
+    .nav-btn:active {
+      transform: scale(0.96);
+    }
+
+    /* Contenedor principal de la diapositiva */
+    .slide-viewport {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .slide-card {
+      background: var(--card-bg);
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 580px;
+      padding: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      position: relative;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-tag {
+      display: inline-block;
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+      width: fit-content;
+    }
+
+    .slide-tag--alert {
+      background: var(--danger);
+    }
+
+    .slide-tag--safe {
+      background: var(--safe);
+    }
+
+    .slide-tag--interactive {
+      background: var(--accent);
+      color: #000000;
+    }
+
+    .slide-title {
+      font-size: 3rem;
+      line-height: 1.2;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: #ffffff;
+    }
+
+    .slide-title span {
+      color: var(--accent);
+    }
+
+    .slide-body {
+      font-size: 1.85rem;
+      line-height: 1.45;
+      color: #e2e8f0;
+      margin-bottom: 2rem;
+    }
+
+    .slide-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .slide-point {
+      font-size: 1.7rem;
+      line-height: 1.4;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.25rem 1.5rem;
+      border-radius: 14px;
+      border-left: 6px solid var(--accent);
+    }
+
+    .slide-point--danger {
+      border-left-color: var(--danger);
+      background: rgba(185, 28, 28, 0.15);
+    }
+
+    .slide-point--safe {
+      border-left-color: var(--safe);
+      background: rgba(21, 128, 61, 0.15);
+    }
+
+    .slide-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+
+    /* Notas del orador */
+    .speaker-notes-drawer {
+      background: #060d1a;
+      border-top: 2px dashed #ffbf00;
+      padding: 1rem 2rem;
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .speaker-notes-drawer strong {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    /* Responsividad para proyectores chicos o notebooks */
+    @media (max-width: 768px) {
+      .slide-card {
+        padding: 1.5rem;
+        min-height: auto;
+      }
+      .slide-title {
+        font-size: 2rem;
+      }
+      .slide-body, .slide-point {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de control -->
+  <header class="slide-nav">
+    <div class="slide-nav__title">
+      🛡️ Charla Comunitaria | José C. Paz
+    </div>
+    <div class="slide-nav__counter" id="slide-indicator">
+      1 / 30
+    </div>
+    <div class="slide-nav__buttons">
+      <button class="nav-btn" id="btn-prev" aria-label="Diapositiva anterior">⬅️ Anterior</button>
+      <button class="nav-btn" id="btn-next" aria-label="Siguiente diapositiva">Siguiente ➡️</button>
+      <button class="nav-btn" id="btn-toggle-notes" style="background: var(--accent); color: #000;">🎤 Notas</button>
+    </div>
+  </header>
+
+  <!-- Espacio de diapositiva -->
+  <main class="slide-viewport">
+    <article class="slide-card" id="slide-container">
+      <!-- El contenido dinámico se carga vía JS -->
+    </article>
+  </main>
+
+  <!-- Notas del orador en vivo -->
+  <aside class="speaker-notes-drawer" id="speaker-notes" style="display: flex;">
+    <strong>🎤 Guion del orador:</strong>
+    <span id="speaker-text">Cargando guía...</span>
+  </aside>
+
+  <script>
+    const slides = [
+      {
+        tag: "Encuentro Barrial",
+        tagClass: "",
+        title: "Cuidemos lo Nuestro: <span>Nadie te Apura</span>",
+        body: "Charla comunitaria sobre prevención de estafas telefónicas y virtuales para adultos mayores y familias de José C. Paz.",
+        points: [
+          { icon: "📍", text: "José C. Paz, Provincia de Buenos Aires", cls: "" },
+          { icon: "🤝", text: "Un espacio de encuentro, tranquilidad y aprendizaje entre vecinos", cls: "" }
+        ],
+        notes: "Saludar con calidez, presentarse con nombre de pila y agradecer la presencia de todos los vecinos."
+      },
+      {
+        tag: "Introducción",
+        tagClass: "",
+        title: "¿Por qué estamos <span>hoy acá</span>?",
+        body: "Porque los vecinos del barrio nos cuidamos entre todos. Nadie nace sabiendo sobre celulares ni computadoras.",
+        points: [
+          { icon: "📱", text: "El celular nos conecta con la familia, pero también trae visitas inesperadas.", cls: "" },
+          { icon: "💡", text: "Hoy venimos a traer tranquilidad, no miedo ni palabras raras en inglés.", cls: "" }
+        ],
+        notes: "Aclarar que no venimos a dar una clase técnica, sino una charla de vecino a vecino."
+      },
+      {
+        tag: "Pregunta al público",
+        tagClass: "slide-tag--interactive",
+        title: "Una pregunta <span>bien sencilla</span>",
+        body: "¿Qué harías si estás barriendo la vereda a las dos de la tarde y para un auto desconocido frente a tu casa?",
+        points: [
+          { icon: "🚗", text: "Baja un señor con traje elegante diciendo que es amigo del banco.", cls: "" },
+          { icon: "🔑", text: "Te pide que le des la llave de la puerta para entrar a contarte la plata.", cls: "" }
+        ],
+        notes: "Hacer una pausa dramática y esperar las risas y respuestas espontáneas del público."
+      },
+      {
+        tag: "Sentido Común Barrial",
+        tagClass: "slide-tag--safe",
+        title: "¡Ni locos <span>le abrimos la puerta</span>!",
+        body: "Ustedes tienen décadas de sabiduría y años de calle. Saben exactamente a quién saludar y a quién desconfiar.",
+        points: [
+          { icon: "🏠", text: "La puerta de casa no se le abre a cualquiera.", cls: "slide-point--safe" },
+          { icon: "🧠", text: "Esa misma picardía y experiencia es la que vamos a usar con el celular.", cls: "slide-point--safe" }
+        ],
+        notes: "Validar la experiencia de vida de los adultos mayores: ellos ya tienen la intuición de seguridad."
+      },
+      {
+        tag: "Concepto Clave",
+        tagClass: "",
+        title: "El teléfono es la <span>nueva puerta</span>",
+        body: "Cuando suena una llamada o llega un mensaje, es como si alguien estuviera tocando el timbre de tu casa.",
+        points: [
+          { icon: "🚪", text: "Atender no significa tener que dejarlo pasar al comedor.", cls: "" },
+          { icon: "✋", text: "Podemos mirar por la mirilla, dudar y, si no nos gusta, no abrir.", cls: "" }
+        ],
+        notes: "Explicar que la llamada no te obliga a dar explicaciones a un desconocido."
+      },
+      {
+        tag: "Uso Positivo",
+        tagClass: "slide-tag--safe",
+        title: "El celular <span>es una gran herramienta</span>",
+        body: "No hay que tenerle miedo al teléfono. Sirve para cosas hermosas todos los días:",
+        points: [
+          { icon: "👶", text: "Ver fotos y videos de los nietos que viven lejos.", cls: "slide-point--safe" },
+          { icon: "🎙️", text: "Mandar audios a los amigos y escuchar música que nos gusta.", cls: "slide-point--safe" },
+          { icon: "🏥", text: "Pedir un turno médico sin hacer colas de madrugada en el frío.", cls: "slide-point--safe" }
+        ],
+        notes: "Reforzar que la tecnología no es el enemigo; queremos que la disfruten con seguridad."
+      },
+      {
+        tag: "El Truco del Delincuente",
+        tagClass: "slide-tag--alert",
+        title: "El único enemigo: <span>El Apuro</span>",
+        body: "Los estafadores saben que si vos pensás con calma, no caés en ninguna trampa. Por eso usan el reloj en tu contra.",
+        points: [
+          { icon: "⏳", text: "'¡Señora, si no lo hace en 10 minutos pierde el beneficio!'.", cls: "slide-point--danger" },
+          { icon: "😰", text: "'¡Su cuenta fue bloqueada, confirme ya o le cobran una multa!'.", cls: "slide-point--danger" }
+        ],
+        notes: "Enfatizar: cada vez que alguien les meta apuro o urgencia, es la señal de alarma número 1."
+      },
+      {
+        tag: "Regla Primera",
+        tagClass: "slide-tag--safe",
+        title: "Regla N° 1: <span>Nadie te apura</span>",
+        body: "Grabémonos esto a fuego en el corazón y en la memoria:",
+        points: [
+          { icon: "🛑", text: "Ningún trámite verdadero del banco o del Estado vence en 10 minutos.", cls: "slide-point--safe" },
+          { icon: "📞", text: "Si te apuran para que decidas rápido... es estafa seguro. ¡Cortá!", cls: "slide-point--safe" }
+        ],
+        notes: "Pedir a la audiencia que repita en voz alta: '¡Si me apuran, corto!'."
+      },
+      {
+        tag: "Caso Real 1",
+        tagClass: "slide-tag--alert",
+        title: "El Cuento de <span>ANSES y PAMI</span>",
+        body: "La historia real de Doña Carmen (72 años, vecina de José C. Paz):",
+        points: [
+          { icon: "📞", text: "La llamaron diciendo que tenía un aumento jubilatorio de $250.000.", cls: "" },
+          { icon: "🏃‍♀️", text: "Le dijeron que fuera urgente al cajero automático con el celular en la oreja.", cls: "slide-point--danger" }
+        ],
+        notes: "Contar la historia con tono dramático pero cercano, usando nombres ficticios."
+      },
+      {
+        tag: "La Trampa del Cajero",
+        tagClass: "slide-tag--alert",
+        title: "¿Por qué te mandan <span>al cajero</span>?",
+        body: "Te van guiando paso a paso para que aprietes botones que no conocés en la pantalla del cajero.",
+        points: [
+          { icon: "🏧", text: "Vos creés que estás cobrando un premio o bono.", cls: "" },
+          { icon: "💸", text: "En realidad, te están haciendo sacar un préstamo y transferírselo a ellos.", cls: "slide-point--danger" }
+        ],
+        notes: "Explicar que los estafadores dictan las opciones de memoria para que la persona no lea la pantalla."
+      },
+      {
+        tag: "La Verdad",
+        tagClass: "slide-tag--safe",
+        title: "La verdad sobre <span>ANSES y PAMI</span>",
+        body: "Tengamos bien presente cómo trabajan los organismos oficiales:",
+        points: [
+          { icon: "✅", text: "Si hay un aumento o bono, se deposita solito en tu cuenta el día de cobro.", cls: "slide-point--safe" },
+          { icon: "❌", text: "NUNCA te van a pedir que vayas a generar claves a un cajero.", cls: "slide-point--danger" }
+        ],
+        notes: "Dejar bien claro que ningún empleado de ANSES llama para pedir ir al cajero."
+      },
+      {
+        tag: "Aclarando Dudas",
+        tagClass: "",
+        title: "¿Qué es un <span>'link' o letras azules</span>?",
+        body: "Muchas veces nos dicen 'tocá el link' y no entendemos qué significa.",
+        points: [
+          { icon: "✉️", text: "Un link es como una dirección escrita en un papelito que te da un extraño.", cls: "" },
+          { icon: "🚪", text: "Si no sabés de quién es la casa, no vayas ni toques la puerta.", cls: "" },
+          { icon: "🚫", text: "Si te llega un mensaje con letras azules de un número raro: ¡No lo toques!", cls: "slide-point--danger" }
+        ],
+        notes: "Usar la metáfora del papelito con la dirección desconocida."
+      },
+      {
+        tag: "Caso Real 2",
+        tagClass: "slide-tag--alert",
+        title: "El Secuestro <span>de WhatsApp</span>",
+        body: "La historia de Don Roberto (68 años):",
+        points: [
+          { icon: "💬", text: "Le escribe un 'amigo' de la iglesia pidiéndole un favor urgente.", cls: "" },
+          { icon: "🔢", text: "'Roberto, te mandé por error un código de 6 números por mensaje, ¿me lo pasás?'.", cls: "slide-point--danger" }
+        ],
+        notes: "Preguntar al público si a alguien le pasó o si conoce a alguien a quien se lo hayan hecho."
+      },
+      {
+        tag: "Concepto Clave",
+        tagClass: "slide-tag--alert",
+        title: "¿Qué es ese <span>código de 6 números</span>?",
+        body: "Ese código que llega por mensaje de texto común (SMS) es algo sagrado:",
+        points: [
+          { icon: "🔑", text: "Es la LLAVE MAESTRA de la puerta de tu WhatsApp.", cls: "slide-point--danger" },
+          { icon: "🛡️", text: "Si se lo das a otra persona, le estás regalando el control de tu teléfono.", cls: "slide-point--danger" }
+        ],
+        notes: "Remarcar: NUNCA se lee ni se dicta ningún número que llegue por SMS."
+      },
+      {
+        tag: "Peligro Inmediato",
+        tagClass: "slide-tag--alert",
+        title: "¿Qué pasa si <span>les das el código</span>?",
+        body: "En menos de dos minutos:",
+        points: [
+          { icon: "📴", text: "Tu WhatsApp se apaga y no te deja entrar más.", cls: "slide-point--danger" },
+          { icon: "🎭", text: "El delincuente se hace pasar por vos con tu misma foto de perfil.", cls: "slide-point--danger" },
+          { icon: "💵", text: "Le escribe a tus hijos y amigos pidiéndoles plata prestada de urgencia.", cls: "slide-point--danger" }
+        ],
+        notes: "Explicar la angustia que esto genera y cómo prevenirlo."
+      },
+      {
+        tag: "Prevención Activa",
+        tagClass: "slide-tag--safe",
+        title: "Si te piden plata <span>por WhatsApp</span>",
+        body: "Aunque sea la foto de tu mejor amigo o de un familiar:",
+        points: [
+          { icon: "📞", text: "Cortá el mensaje y LLAMALO POR TELÉFONO COMÚN a su número de siempre.", cls: "slide-point--safe" },
+          { icon: "🗣️", text: "Escuchá su voz real antes de hacer cualquier transferencia.", cls: "slide-point--safe" }
+        ],
+        notes: "La regla de la llamada por voz: si no escucho tu voz, no hay plata."
+      },
+      {
+        tag: "Protección Práctica",
+        tagClass: "slide-tag--safe",
+        title: "El Candado: <span>Verificación en dos pasos</span>",
+        body: "Es una traba extra que le ponemos a WhatsApp para que nadie pueda robarlo:",
+        points: [
+          { icon: "⚙️", text: "Se activa en 2 minutos desde Ajustes > Cuenta > Verificación en dos pasos.", cls: "slide-point--safe" },
+          { icon: "🔢", text: "Elegís 6 números que solo vos sabés y quedan anotados en tu casa.", cls: "slide-point--safe" }
+        ],
+        notes: "Mostrar que en la página web del proyecto está el paso a paso para tildar con el celular."
+      },
+      {
+        tag: "Caso Real 3",
+        tagClass: "slide-tag--alert",
+        title: "El Falso Comprobante <span>en el Almacén</span>",
+        body: "La historia de Don Pedro (comerciante de José C. Paz):",
+        points: [
+          { icon: "🛒", text: "Viene un cliente apurado, compra mercadería y muestra el celular.", cls: "" },
+          { icon: "🖼️", text: "Muestra una imagen verde que dice 'Transferencia exitosa'.", cls: "" },
+          { icon: "❌", text: "Don Pedro le entrega las cosas... pero la plata nunca entró.", cls: "slide-point--danger" }
+        ],
+        notes: "Hablar de cómo las aplicaciones truchas simulan pantallas idénticas a Mercado Pago."
+      },
+      {
+        tag: "Regla para Comerciantes",
+        tagClass: "slide-tag--safe",
+        title: "La plata se mira <span>en tu propio celular</span>",
+        body: "Una foto en la pantalla de otra persona se trucha en dos minutos:",
+        points: [
+          { icon: "📱", text: "No mires el teléfono del cliente. Abrí TU PROPIA APLICACIÓN.", cls: "slide-point--safe" },
+          { icon: "✅", text: "Si no ves la plata acreditada en tu saldo, la mercadería no sale del mostrador.", cls: "slide-point--safe" }
+        ],
+        notes: "Consejo de oro para todos los vecinos que tienen pequeños emprendimientos familiares."
+      },
+      {
+        tag: "Mandamiento Barrial",
+        tagClass: "slide-tag--safe",
+        title: "⭐ La Regla de Oro",
+        body: "'Ante la duda, soltá el teléfono y preguntale a alguien de confianza.'",
+        points: [
+          { icon: "🫖", text: "Respirá hondo, tomate unos mates y hablá con un hijo o vecino.", cls: "slide-point--safe" },
+          { icon: "🤝", text: "Preguntar no es señal de debilidad; es señal de inteligencia.", cls: "slide-point--safe" }
+        ],
+        notes: "Hacer énfasis en la empatía: nadie nace sabiendo y consultar te salva la jubilación."
+      },
+      {
+        tag: "Dinámica en Vivo",
+        tagClass: "slide-tag--interactive",
+        title: "¡A jugar! <span>¿Es Verdad o es Trampa?</span>",
+        body: "Les voy a leer situaciones cotidianas. Si sienten que es sano, gritan '¡VERDAD!'. Si huele a engaño, gritan '¡TRAMPA!'.",
+        points: [
+          { icon: "📢", text: "Participamos todos juntos en voz alta.", cls: "" }
+        ],
+        notes: "Animar al auditorio, calentar el ambiente y prepararse para la interacción."
+      },
+      {
+        tag: "Juego: Ronda 1",
+        tagClass: "slide-tag--interactive",
+        title: "Situación 1: <span>El Descuento de Gas</span>",
+        body: "'Te llaman de un número desconocido diciendo que por ser jubilado tenés un 50% de descuento en el gas, pero tenés que dictarles los números de tu tarjeta de débito'.",
+        points: [
+          { icon: "🤔", text: "¿Qué le gritamos a esta llamada?", cls: "" }
+        ],
+        notes: "Esperar el grito unánime de '¡TRAMPA!'. Felicitar al salón."
+      },
+      {
+        tag: "Juego: Ronda 2",
+        tagClass: "slide-tag--interactive",
+        title: "Situación 2: <span>El Nieto Apurado</span>",
+        body: "'Te llega un mensaje: Hola abu, me robaron el cel y este es mi número nuevo. No me llames porque no anda el micrófono. ¿Me transferís 30 mil pesos para el colectivo?'.",
+        points: [
+          { icon: "🤔", text: "¿Qué le gritamos a este mensaje?", cls: "" }
+        ],
+        notes: "Celebrar la respuesta. Recordar: si el micrófono no anda, se llama a los padres del nieto."
+      },
+      {
+        tag: "Juego: Ronda 3",
+        tagClass: "slide-tag--interactive",
+        title: "Situación 3: <span>Cobro en Ventanilla</span>",
+        body: "'Vas al Banco Provincia de José C. Paz el día de cobro, vas a la ventanilla con tu DNI, la cajera te entrega el recibo y la plata en mano'.",
+        points: [
+          { icon: "🤔", text: "¿Qué decimos?", cls: "" }
+        ],
+        notes: "Todos gritan '¡VERDAD!'. Remarcar la seguridad del trámite presencial tradicional."
+      },
+      {
+        tag: "Plan de Acción Rápido",
+        tagClass: "slide-tag--alert",
+        title: "¿Creés que te estafaron? <span>Hacé esto ya</span>",
+        body: "Si sentís que te engañaron o diste un dato sin querer, no te paralices:",
+        points: [
+          { icon: "1️⃣", text: "Cortá la llamada inmediatamente.", cls: "slide-point--danger" },
+          { icon: "2️⃣", text: "Llamá al banco (al número del plástico de la tarjeta) y pedí el bloqueo.", cls: "slide-point--danger" },
+          { icon: "3️⃣", text: "Avisale a tu familia o a un vecino sin vergüenza.", cls: "slide-point--danger" }
+        ],
+        notes: "Repasar los 3 pasos del banner de emergencia de la web."
+      },
+      {
+        tag: "Resumen Visual",
+        tagClass: "",
+        title: "El Semáforo <span>de la Seguridad</span>",
+        body: "Una guía rápida para recordar en cualquier momento:",
+        points: [
+          { icon: "🔴", text: "ROJO: Te piden códigos por SMS o ir al cajero -> ¡Cortá ya!", cls: "slide-point--danger" },
+          { icon: "🟡", text: "AMARILLO: Links raros o amigos pidiendo plata -> ¡Frená y dudá!", cls: "" },
+          { icon: "🟢", text: "VERDE: Consultar con la familia o ir al banco en persona -> ¡Tranquilidad!", cls: "slide-point--safe" }
+        ],
+        notes: "Mencionar que este semáforo está listo para imprimir y colgar en la heladera."
+      },
+      {
+        tag: "Abrazo Comunitario",
+        tagClass: "slide-tag--safe",
+        title: "Sin culpa <span>ni vergüenza</span>",
+        body: "Si alguna vez caíste en una estafa, sacate la culpa de encima:",
+        points: [
+          { icon: "❤️", text: "No te pasó por tonto ni por descuidado.", cls: "slide-point--safe" },
+          { icon: "🕵️", text: "Son bandas de profesionales organizadas que engañan a médicos, abogados y jóvenes por igual.", cls: "slide-point--safe" },
+          { icon: "🗣️", text: "Contarlo ayuda a que a ningún otro vecino le vuelva a pasar.", cls: "slide-point--safe" }
+        ],
+        notes: "Momento de profunda empatía. Mirar a los ojos al público y transmitir alivio."
+      },
+      {
+        tag: "Teléfonos Barriales",
+        tagClass: "",
+        title: "Dónde pedir ayuda en <span>José C. Paz</span>",
+        body: "Teléfonos oficiales y comisarías de nuestra localidad:",
+        points: [
+          { icon: "👮", text: "Comisaría 1ra (Altube 2050): (02320) 422-111 (24 horas)", cls: "" },
+          { icon: "🚨", text: "Centro de Operaciones Municipal (COM): (02320) 463-000", cls: "" },
+          { icon: "⚖️", text: "Fiscalía de Ciberdelitos (UFECI): (011) 5071-0040", cls: "" },
+          { icon: "📞", text: "Línea 137 (Acompañamiento a víctimas): Llamada gratuita", cls: "" }
+        ],
+        notes: "Asegurarse de que anoten o lleven el volante con estos números."
+      },
+      {
+        tag: "Material de Bolsillo",
+        tagClass: "slide-tag--safe",
+        title: "Tu Machete <span>para la Heladera</span>",
+        body: "Todo lo que aprendimos hoy está disponible para llevar a casa:",
+        points: [
+          { icon: "🖨️", text: "Ficha impresa con letras gigantes para pegar con un imán en la heladera.", cls: "slide-point--safe" },
+          { icon: "📲", text: "Página web comunitaria para compartir los consejos con la familia por WhatsApp.", cls: "slide-point--safe" }
+        ],
+        notes: "Mostrar físicamente la hoja impresa o indicar dónde retirarla al salir."
+      },
+      {
+        tag: "Agradecimiento",
+        tagClass: "slide-tag--safe",
+        title: "¡Muchas gracias, <span>vecinos!</span>",
+        body: "Cuidar nuestra plata y nuestra tranquilidad es un trabajo de toda la comunidad.",
+        points: [
+          { icon: "🤝", text: "Prácticas Digitales y NTICx - Proyecto Educativo Barrial", cls: "slide-point--safe" },
+          { icon: "💬", text: "Abrimos la ronda de preguntas, anécdotas y unos ricos mates.", cls: "slide-point--safe" }
+        ],
+        notes: "Aplauso final y apertura del espacio de diálogo distendido."
+      }
+    ];
+
+    let currentSlide = 0;
+
+    const slideContainer = document.getElementById('slide-container');
+    const slideIndicator = document.getElementById('slide-indicator');
+    const speakerText = document.getElementById('speaker-text');
+    const speakerNotes = document.getElementById('speaker-notes');
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const btnToggleNotes = document.getElementById('btn-toggle-notes');
+
+    function renderSlide(index) {
+      const data = slides[index];
+
+      let pointsHtml = '';
+      if (data.points && data.points.length > 0) {
+        pointsHtml = `
+          <ul class="slide-points">
+            ${data.points.map(p => `
+              <li class="slide-point ${p.cls}">
+                <span class="slide-icon">${p.icon}</span>
+                <span>${p.text}</span>
+              </li>
+            `).join('')}
+          </ul>
+        `;
+      }
+
+      slideContainer.innerHTML = `
+        <span class="slide-tag ${data.tagClass}">${data.tag}</span>
+        <h2 class="slide-title">${data.title}</h2>
+        <p class="slide-body">${data.body}</p>
+        ${pointsHtml}
+      `;
+
+      slideIndicator.textContent = `${index + 1} / ${slides.length}`;
+      speakerText.textContent = data.notes;
+
+      btnPrev.disabled = index === 0;
+      btnNext.disabled = index === slides.length - 1;
+    }
+
+    btnPrev.addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        renderSlide(currentSlide);
+      }
+    });
+
+    btnNext.addEventListener('click', () => {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        renderSlide(currentSlide);
+      }
+    });
+
+    btnToggleNotes.addEventListener('click', () => {
+      speakerNotes.style.display = speakerNotes.style.display === 'none' ? 'flex' : 'none';
+    });
+
+    // Control con teclado para el proyector (Flechas Izquierda / Derecha / Espacio)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        if (currentSlide < slides.length - 1) {
+          currentSlide++;
+          renderSlide(currentSlide);
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        if (currentSlide > 0) {
+          currentSlide--;
+          renderSlide(currentSlide);
+        }
+      }
+    });
+
+    // Iniciar con la primera diapositiva
+    renderSlide(currentSlide);
+  </script>
+</body>
+</html>
