@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="100%" height="100%" role="img" aria-label="Alerta visual: Nunca compartir pantalla en videollamadas con desconocidos">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="350" rx="16" fill="#fff1f2" stroke="#f43f5e" stroke-width="3"/>
+
+  <!-- TÍTULO DE ALERTA -->
+  <rect x="0" y="0" width="600" height="55" rx="16" fill="#be123c"/>
+  <text x="300" y="36" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">
+    ⚠️ PELIGRO: NUNCA TOQUES EL BOTÓN "COMPARTIR PANTALLA"
+  </text>
+
+  <!-- ILUSTRACIÓN DEL CELULAR CON VIDEOLLAMADA -->
+  <g transform="translate(130, 200)" filter="url(#shadow)">
+    <!-- Celular -->
+    <rect x="-65" y="-120" width="130" height="230" rx="18" fill="#1e293b"/>
+    <rect x="-56" y="-105" width="112" height="185" rx="8" fill="#0f172a"/>
+    
+    <!-- Pantalla de videollamada con foto de perfil trucha -->
+    <circle cx="0" cy="-45" r="28" fill="#3b82f6"/>
+    <text x="0" y="-38" font-family="'Outfit', sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">🏦</text>
+    <text x="0" y="-2" font-family="'Outfit', sans-serif" font-size="11" font-weight="700" fill="#cbd5e1" text-anchor="middle">"Banco Oficial"</text>
+
+    <!-- Barra de botones de videollamada abajo -->
+    <rect x="-50" y="35" width="100" height="35" rx="17" fill="#334155"/>
+    <circle cx="-32" cy="52" r="11" fill="#ef4444"/> <!-- Colgar -->
+    <circle cx="-8" cy="52" r="11" fill="#64748b"/> <!-- Micrófono -->
+    
+    <!-- EL BOTÓN PELIGROSO DE COMPARTIR PANTALLA (RESALTADO Y TACHADO) -->
+    <circle cx="22" cy="52" r="15" fill="#facc15" stroke="#dc2626" stroke-width="3"/>
+    <!-- Ícono de pantallita -->
+    <rect x="16" y="46" width="12" height="9" rx="1" fill="#000000"/>
+    <line x1="22" y1="55" x2="22" y2="58" stroke="#000000" stroke-width="2"/>
+    <!-- Cruz Roja Grande encima -->
+    <line x1="10" y1="40" x2="34" y2="64" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+    <line x1="34" y1="40" x2="10" y2="64" stroke="#dc2626" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- TEXTO EXPLICATIVO EN BLOQUE GRÁFICO -->
+  <g transform="translate(240, 95)" font-family="'Outfit', sans-serif">
+    <rect x="0" y="0" width="330" height="215" rx="12" fill="#ffffff" stroke="#fda4af" stroke-width="2"/>
+    
+    <text x="20" y="32" font-size="17" font-weight="900" fill="#9f1239">¿Por qué es una trampa?</text>
+    
+    <text x="20" y="65" font-size="14" font-weight="700" fill="#475569">
+      1. Te llaman diciendo que son del banco.
+    </text>
+    
+    <text x="20" y="95" font-size="14" font-weight="700" fill="#475569">
+      2. Te piden tocar esa pantallita amarilla.
+    </text>
+    
+    <text x="20" y="125" font-size="14" font-weight="700" fill="#be123c">
+      3. ¡Al tocarlo, el ladrón VE EN VIVO tus
+    </text>
+    <text x="38" y="145" font-size="14" font-weight="900" fill="#be123c">
+      claves de Cuenta DNI y del banco!
+    </text>
+    
+    <rect x="15" y="165" width="300" height="35" rx="8" fill="#ffe4e6"/>
+    <text x="165" y="188" font-size="13" font-weight="900" fill="#9f1239" text-anchor="middle">
+      🛡️ Solución: ¡Cortá la videollamada ya!
+    </text>
+  </g>
+</svg>

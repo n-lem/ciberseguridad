@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="100%" height="100%" role="img" aria-label="Ilustración de la Regla de Oro: Soltá el teléfono y respirá con calma">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef9c3"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+    <filter id="shadowBox" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="700" height="320" rx="18" fill="url(#goldGrad)" stroke="#ca8a04" stroke-width="3"/>
+
+  <!-- ESTRELLA DORADA GIGANTE -->
+  <g transform="translate(110, 160)" filter="url(#shadowBox)">
+    <circle cx="0" cy="0" r="70" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="58" fill="#ca8a04"/>
+    <text x="0" y="24" font-family="'Outfit', sans-serif" font-size="70" fill="#ffffff" text-anchor="middle">⭐</text>
+  </g>
+
+  <!-- MENSAJE CENTRAL EN LETRAS GRANDES -->
+  <g transform="translate(220, 75)" font-family="'Outfit', sans-serif">
+    <rect x="0" y="-10" width="440" height="34" rx="8" fill="#ca8a04"/>
+    <text x="220" y="13" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1">
+      LA REGLA SAGRADA DE LOS VECINOS
+    </text>
+
+    <text x="0" y="65" font-size="26" font-weight="900" fill="#713f12">
+      "Ante la duda, soltá el teléfono
+    </text>
+    <text x="0" y="98" font-size="26" font-weight="900" fill="#854d0e">
+      y preguntale a alguien de confianza"
+    </text>
+
+    <!-- Tres Pastillas Ilustradas -->
+    <g transform="translate(0, 130)" font-size="14" font-weight="800">
+      <rect x="0" y="0" width="135" height="38" rx="19" fill="#ffffff" stroke="#ca8a04" stroke-width="2"/>
+      <text x="67" y="24" fill="#854d0e" text-anchor="middle">🛑 1. FRENÁ</text>
+
+      <rect x="150" y="0" width="135" height="38" rx="19" fill="#ffffff" stroke="#ca8a04" stroke-width="2"/>
+      <text x="217" y="24" fill="#854d0e" text-anchor="middle">☕ 2. RESPIRÁ</text>
+
+      <rect x="300" y="0" width="140" height="38" rx="19" fill="#ffffff" stroke="#ca8a04" stroke-width="2"/>
+      <text x="370" y="24" fill="#854d0e" text-anchor="middle">🗣️ 3. CONSULTÁ</text>
+    </g>
+  </g>
+</svg>

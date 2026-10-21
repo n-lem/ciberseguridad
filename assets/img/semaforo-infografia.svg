@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%" role="img" aria-label="Infografía ilustrada del Semáforo de la Estafa: Rojo, Amarillo y Verde">
+  <defs>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo General -->
+  <rect width="900" height="500" rx="20" fill="#f8fafc"/>
+
+  <!-- TÍTULO DE LA INFOGRAFÍA -->
+  <rect x="30" y="20" width="840" height="60" rx="14" fill="#004b93"/>
+  <text x="450" y="58" font-family="'Outfit', sans-serif" font-size="24" font-weight="900" fill="#ffffff" text-anchor="middle">
+    🚦 INFOGRAFÍA VISUAL: EL SEMÁFORO DE TU TRANQUILIDAD
+  </text>
+
+  <!-- COLUMNA 1: ROJO (PELIGRO) -->
+  <g transform="translate(45, 100)" filter="url(#cardShadow)">
+    <rect width="250" height="370" rx="16" fill="#fee2e2" stroke="#b91c1c" stroke-width="4"/>
+    
+    <!-- Círculo Rojo Semáforo -->
+    <circle cx="125" cy="45" r="32" fill="#b91c1c"/>
+    <text x="125" y="55" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">🔴</text>
+    
+    <text x="125" y="105" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#991b1b" text-anchor="middle">
+      ¡CORTÁ YA!
+    </text>
+    <text x="125" y="125" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#7f1d1d" text-anchor="middle">
+      Peligro Inmediato
+    </text>
+
+    <!-- Ícono Ilustrado: Teléfono con cruz roja -->
+    <g transform="translate(125, 175)">
+      <circle cx="0" cy="0" r="36" fill="#ffffff" stroke="#ef4444" stroke-width="3"/>
+      <!-- Tubo de teléfono cortado -->
+      <path d="M-15,-10 C-18,-18 -6,-24 0,-18 L8,-10 C12,-6 8,4 2,10 C-4,16 -14,12 -18,8 Z" fill="#b91c1c"/>
+      <line x1="-24" y1="-24" x2="24" y2="24" stroke="#dc2626" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Puntos Clave Ilustrados -->
+    <g transform="translate(20, 240)" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#450a0a">
+      <text x="0" y="0">❌ Te piden código de 6 números</text>
+      <text x="0" y="28">❌ Te dicen 'abra Cuenta DNI'</text>
+      <text x="0" y="56">❌ Te piden dictar el Token</text>
+      <text x="0" y="84">❌ Te piden compartir pantalla</text>
+      <text x="0" y="112">❌ Te mandan urgente al cajero</text>
+    </g>
+  </g>
+
+  <!-- COLUMNA 2: AMARILLO (DUDA) -->
+  <g transform="translate(325, 100)" filter="url(#cardShadow)">
+    <rect width="250" height="370" rx="16" fill="#fef3c7" stroke="#b45309" stroke-width="4"/>
+    
+    <!-- Círculo Amarillo Semáforo -->
+    <circle cx="125" cy="45" r="32" fill="#f59e0b"/>
+    <text x="125" y="55" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">🟡</text>
+    
+    <text x="125" y="105" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#92400e" text-anchor="middle">
+      ¡FRENÁ Y DUDÁ!
+    </text>
+    <text x="125" y="125" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#78350f" text-anchor="middle">
+      No te apures nunca
+    </text>
+
+    <!-- Ícono Ilustrado: Lupa de inspección -->
+    <g transform="translate(125, 175)">
+      <circle cx="0" cy="0" r="36" fill="#ffffff" stroke="#f59e0b" stroke-width="3"/>
+      <circle cx="-5" cy="-5" r="16" fill="none" stroke="#b45309" stroke-width="5"/>
+      <line x1="7" y1="7" x2="22" y2="22" stroke="#b45309" stroke-width="6" stroke-linecap="round"/>
+      <text x="-5" y="2" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#b45309" text-anchor="middle">?</text>
+    </g>
+
+    <!-- Puntos Clave Ilustrados -->
+    <g transform="translate(20, 240)" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#713f12">
+      <text x="0" y="0">⚠️ Mensajes con letras azules (links)</text>
+      <text x="0" y="28">⚠️ Amigo que pide plata de apuro</text>
+      <text x="0" y="56">⚠️ 'Te transferí de más por error'</text>
+      <text x="0" y="84">⚠️ Premios o sorteos inesperados</text>
+      <text x="0" y="112">⚠️ Mensajes con faltas o apuros</text>
+    </g>
+  </g>
+
+  <!-- COLUMNA 3: VERDE (TRANQUILIDAD) -->
+  <g transform="translate(605, 100)" filter="url(#cardShadow)">
+    <rect width="250" height="370" rx="16" fill="#dcfce7" stroke="#15803d" stroke-width="4"/>
+    
+    <!-- Círculo Verde Semáforo -->
+    <circle cx="125" cy="45" r="32" fill="#16a34a"/>
+    <text x="125" y="55" font-family="'Outfit', sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">🟢</text>
+    
+    <text x="125" y="105" font-family="'Outfit', sans-serif" font-size="20" font-weight="900" fill="#166534" text-anchor="middle">
+      ¡TRANQUILIDAD!
+    </text>
+    <text x="125" y="125" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#14532d" text-anchor="middle">
+      Pasos 100% Seguros
+    </text>
+
+    <!-- Ícono Ilustrado: Tilde y mate seguro -->
+    <g transform="translate(125, 175)">
+      <circle cx="0" cy="0" r="36" fill="#ffffff" stroke="#22c55e" stroke-width="3"/>
+      <path d="M-14,2 L-4,14 L16,-10" fill="none" stroke="#15803d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Puntos Clave Ilustrados -->
+    <g transform="translate(20, 240)" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#14532d">
+      <text x="0" y="0">✔️ Cortá y llamá a tu hijo/nieto</text>
+      <text x="0" y="28">✔️ Andá al banco en persona</text>
+      <text x="0" y="56">✔️ Mirá la plata en TU celular</text>
+      <text x="0" y="84">✔️ Activá el candado de WhatsApp</text>
+      <text x="0" y="112">✔️ Tomate unos mates y pensá</text>
+    </g>
+  </g>
+</svg>

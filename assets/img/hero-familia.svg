@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" role="img" aria-label="Ilustración de adultos mayores y jóvenes aprendiendo a usar el celular con mate y tranquilidad">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004b93"/>
+      <stop offset="100%" stop-color="#0c1a30"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffbf00"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="mateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo Suave con Formas Amigables -->
+  <rect width="800" height="450" rx="24" fill="url(#bgGrad)"/>
+  <circle cx="120" cy="80" r="140" fill="#ffffff" opacity="0.04"/>
+  <circle cx="720" cy="380" r="180" fill="#ffffff" opacity="0.04"/>
+  <path d="M0,360 Q200,320 400,350 T800,340 L800,450 L0,450 Z" fill="#ffffff" opacity="0.06"/>
+
+  <!-- Mesa Hogareña -->
+  <ellipse cx="400" cy="390" rx="360" ry="50" fill="#1e293b" opacity="0.6"/>
+
+  <!-- ESCUDO DE TRANQUILIDAD Y PROTECCIÓN CENTRAL -->
+  <g transform="translate(400, 210)" filter="url(#softShadow)">
+    <path d="M0,-120 C70,-120 120,-100 120,-30 C120,60 50,110 0,140 C-50,110 -120,60 -120,-30 C-120,-100 -70,-120 0,-120 Z" fill="#ffffff"/>
+    <path d="M0,-110 C62,-110 108,-92 108,-30 C108,50 45,98 0,126 C-45,98 -108,50 -108,-30 C-108,-92 -62,-110 0,-110 Z" fill="#e0edfb"/>
+    
+    <!-- Celular con Candado Seguro Adentro del Escudo -->
+    <rect x="-32" y="-65" width="64" height="115" rx="12" fill="#004b93"/>
+    <rect x="-26" y="-55" width="52" height="85" rx="6" fill="#ffffff"/>
+    <!-- Candado Dorado en la Pantalla -->
+    <path d="M-10,-20 A10,10 0 0,1 10,-20 L10,-10 L-10,-10 Z" fill="none" stroke="#f59e0b" stroke-width="4"/>
+    <rect x="-14" y="-10" width="28" height="22" rx="4" fill="#ffbf00"/>
+    <circle cx="0" cy="0" r="3" fill="#78350f"/>
+    <!-- Tilde Verde de Seguro -->
+    <circle cx="0" cy="24" r="7" fill="#15803d"/>
+    <path d="M-4,24 L-1,27 L4,21" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ADULTO MAYOR (Lado Izquierdo) -->
+  <g transform="translate(180, 240)">
+    <!-- Cuerpo / Abrigo cómodo -->
+    <path d="M-60,150 C-60,70 -30,40 0,40 C30,40 60,70 60,150 Z" fill="#3b82f6"/>
+    <!-- Cuello y bufanda cálida -->
+    <path d="M-25,45 C-10,65 10,65 25,45 L15,85 L-15,85 Z" fill="#f59e0b"/>
+    <!-- Cabeza -->
+    <ellipse cx="0" cy="0" rx="36" ry="42" fill="#fed7aa"/>
+    <!-- Pelo Canoso Amigable -->
+    <path d="M-38,-10 C-40,-45 0,-50 38,-10 C42,-30 20,-48 0,-48 C-20,-48 -42,-30 -38,-10 Z" fill="#e2e8f0"/>
+    <!-- Lentes de lectura -->
+    <circle cx="-14" cy="-2" r="11" fill="none" stroke="#475569" stroke-width="3"/>
+    <circle cx="14" cy="-2" r="11" fill="none" stroke="#475569" stroke-width="3"/>
+    <line x1="-3" y1="-2" x2="3" y2="-2" stroke="#475569" stroke-width="3"/>
+    <!-- Sonrisa Serena -->
+    <path d="M-12,18 Q0,28 12,18" fill="none" stroke="#9a3412" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="-24" cy="12" r="5" fill="#fca5a5" opacity="0.6"/>
+    <circle cx="24" cy="12" r="5" fill="#fca5a5" opacity="0.6"/>
+  </g>
+
+  <!-- EL MATE COMPARTIDO (Símbolo de Pausa y Charla) -->
+  <g transform="translate(400, 350)">
+    <ellipse cx="0" cy="15" rx="30" ry="8" fill="#000000" opacity="0.3"/>
+    <path d="M-22,-10 C-26,20 26,20 22,-10 C18,-15 -18,-15 -22,-10 Z" fill="url(#mateGrad)"/>
+    <ellipse cx="0" cy="-10" rx="20" ry="6" fill="#15803d"/> <!-- Yerba -->
+    <!-- Bombilla plateada -->
+    <line x1="2" y1="-8" x2="22" y2="-45" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round"/>
+    <line x1="22" y1="-45" x2="28" y2="-50" stroke="#f59e0b" stroke-width="5" stroke-linecap="round"/>
+    <!-- Vaporcito de charla cálida -->
+    <path d="M-5,-20 Q-10,-35 -3,-45" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+    <path d="M5,-18 Q12,-32 7,-42" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- JOVEN / FAMILIAR QUE ACOMPAÑA (Lado Derecho) -->
+  <g transform="translate(620, 240)">
+    <!-- Cuerpo -->
+    <path d="M-55,150 C-55,75 -25,45 0,45 C25,45 55,75 55,150 Z" fill="#10b981"/>
+    <!-- Cabeza -->
+    <ellipse cx="0" cy="5" rx="34" ry="38" fill="#fed7aa"/>
+    <!-- Cabello moderno -->
+    <path d="M-36,-5 C-36,-40 25,-48 38,-15 C30,-30 0,-35 -20,-25 Z" fill="#451a03"/>
+    <!-- Ojos alegres y Sonrisa -->
+    <circle cx="-12" cy="2" r="3.5" fill="#1e293b"/>
+    <circle cx="12" cy="2" r="3.5" fill="#1e293b"/>
+    <path d="M-10,20 Q0,30 10,20" fill="none" stroke="#9a3412" stroke-width="3" stroke-linecap="round"/>
+    <!-- Gesto de pulgar arriba o mano cálida -->
+    <circle cx="-50" cy="90" r="14" fill="#fed7aa"/>
+    <path d="M-54,82 L-50,75 L-46,82 Z" fill="#fed7aa"/>
+  </g>
+
+  <!-- BANNER INFERIOR CON MENSAJE -->
+  <g transform="translate(400, 415)">
+    <rect x="-240" y="-18" width="480" height="36" rx="18" fill="#ffffff" filter="url(#softShadow)"/>
+    <text x="0" y="6" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#004b93" text-anchor="middle">
+      ☕ NADIE TE APURA: EN EL BARRIO NOS CUIDAMOS EN FAMILIA
+    </text>
+  </g>
+</svg>

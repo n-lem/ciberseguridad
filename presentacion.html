@@ -270,6 +270,7 @@
         tag: "Encuentro Barrial",
         tagClass: "",
         title: "Cuidemos lo Nuestro: <span>Nadie te Apura</span>",
+        image: "assets/img/hero-familia.svg",
         body: "Charla comunitaria sobre prevención de estafas telefónicas y virtuales para adultos mayores y familias de José C. Paz.",
         points: [
           { icon: "📍", text: "José C. Paz, Provincia de Buenos Aires", cls: "" },
@@ -483,6 +484,7 @@
         tag: "Alerta 2026",
         tagClass: "slide-tag--alert",
         title: "⚠️ ¡NUNCA toques <span>'Compartir Pantalla'</span>!",
+        image: "assets/img/alerta-pantalla.svg",
         body: "Te llaman por videollamada con foto de Banco Provincia o WhatsApp oficial:",
         points: [
           { icon: "📲", text: "Te piden tocar el botoncito con forma de pantalla abajo.", cls: "slide-point--danger" },
@@ -543,6 +545,7 @@
         tag: "Mandamiento Barrial",
         tagClass: "slide-tag--safe",
         title: "⭐ La Regla de Oro",
+        image: "assets/img/regla-de-oro.svg",
         body: "'Ante la duda, soltá el teléfono y preguntale a alguien de confianza.'",
         points: [
           { icon: "🫖", text: "Respirá hondo, tomate unos mates y hablá con un hijo o vecino.", cls: "slide-point--safe" },
@@ -606,6 +609,7 @@
         tag: "Resumen Visual",
         tagClass: "",
         title: "El Semáforo <span>de la Seguridad</span>",
+        image: "assets/img/semaforo-infografia.svg",
         body: "Una guía rápida para recordar en cualquier momento:",
         points: [
           { icon: "🔴", text: "ROJO: Te piden códigos por SMS o ir al cajero -> ¡Cortá ya!", cls: "slide-point--danger" },
@@ -676,6 +680,15 @@
     function renderSlide(index) {
       const data = slides[index];
 
+      let imageHtml = '';
+      if (data.image) {
+        imageHtml = `
+          <div style="width: 100%; max-width: 550px; margin: 0 auto 1.25rem; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <img src="${data.image}" alt="${data.title}" style="width: 100%; height: auto; display: block;">
+          </div>
+        `;
+      }
+
       let pointsHtml = '';
       if (data.points && data.points.length > 0) {
         pointsHtml = `
@@ -693,6 +706,7 @@
       slideContainer.innerHTML = `
         <span class="slide-tag ${data.tagClass}">${data.tag}</span>
         <h2 class="slide-title">${data.title}</h2>
+        ${imageHtml}
         <p class="slide-body">${data.body}</p>
         ${pointsHtml}
       `;
